@@ -1,0 +1,36 @@
+// Lists
+
+.clean-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+// Text Helpers
+
+.logo {
+    font-family: $font-logo;
+    font-size: rem(40px);
+    
+    span {
+        color: $color-2;
+    }
+}
+
+// Flex Helpers
+
+.flex {
+    display: flex;
+}
+
+.flex-1 {
+    flex: 1;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.align-center {
+    align-items: center;
+}

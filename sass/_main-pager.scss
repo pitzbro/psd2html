@@ -1,0 +1,4 @@
+.main-pager {
+  @include bordered-content;
+  border-top: $main-border;
+}

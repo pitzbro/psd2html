@@ -25,3 +25,11 @@ $narrow-breakpoint: 980px;
 @function em($pixels, $context: 16px) {
   @return ($pixels/$context) * 1em;
 }
+
+/* Layout mixins */
+
+@mixin bordered-content {
+  border-right: $main-border;
+  border-left: $main-border;
+  padding: 20px;
+}

@@ -1,10 +1,14 @@
 /*---------- Layout  ----------*/
 
+* {
+    box-sizing: border-box;
+}
+
 .container {
     max-width: $narrow-breakpoint;
     margin: 0 auto;
 
     @include for-narrow-layout {
-        max-width: $mobile-breakpoint
+        max-width: $mobile-breakpoint;
     }
 }

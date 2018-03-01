@@ -1,0 +1,15 @@
+{
+  "name": "codingacademy-psdhtml",
+  "version": "1.0.0",
+  "main": "index.html",
+  "license": "MIT",
+  "scripts": {
+    "start": "npm-run-all --parallel styles lite-server",
+    "styles": "node-sass sass/style.scss -o css --watch",
+    "lite-server": "lite-server"
+  },
+  "devDependencies": {
+    "node-sass": "^3.13.0",
+    "npm-run-all": "^3.1.1"
+  }
+}

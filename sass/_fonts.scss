@@ -1,0 +1,49 @@
+/*----------  Lato  ----------*/
+
+@font-face {
+  font-family: 'latoregular';
+  src: url('../fonts/lato/Lato-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'latobold';
+  src: url('../fonts/lato/Lato-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+/*----------  Eurof  ----------*/
+
+@font-face {
+    font-family: 'eurofbold';
+    src: url('../fonts/euro/eurof55.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+/*----------  Font Awesome  ----------*/
+
+@font-face {
+  font-family: 'fontawesome';
+  src: url('../fonts/fontawesome/FontAwesome.otf');
+  src: url('../fonts/fontawesome/fontawesome-webfont.eot') format('embedded-opentype'),
+    url('../fonts/fontawesome/fontawesome-webfont.woff2') format('woff2'),
+    url('../fonts/fontawesome/fontawesome-webfont.woff') format('woff'),
+    url('../fonts/fontawesome/fontawesome-webfont.ttf') format('truetype'),
+    url('../fonts/fontawesome/fontawesome-webfont.svg') format('svg');
+//  src: url('#{$fa-font-path}/FontAwesome.otf') format('opentype'); // used when developing fonts
+  font-weight: normal;
+  font-style: normal;
+}
+
+.fa {
+    display: inline-block;
+    font-family: fontawesome;
+    font-size: inherit; // can't have font-size inherit on line above, so need to override
+    text-rendering: auto; // optimizelegibility throws things off #1094
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}

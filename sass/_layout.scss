@@ -1,0 +1,10 @@
+/*---------- Layout  ----------*/
+
+.container {
+    max-width: $narrow-breakpoint;
+    margin: 0 auto;
+
+    @include for-narrow-layout {
+        max-width: $mobile-breakpoint
+    }
+}

@@ -1,0 +1,192 @@
+* {
+  box-sizing: border-box;
+}
+
+button:focus, button:active, input:focus, input:active, select:focus, select:active, textarea:focus, textarea:active {
+  outline: none;
+}
+
+html { 
+  height: 100%;
+  background: $highlite-color-1;
+  background: green;
+  // @include for-narrow-layout {
+  //   font-size: 14px;
+  // }
+}
+
+body {
+  min-height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding: 10px 0;
+  padding: ($menu-height + 10px) 0 10px; 
+  font: 18px/1.5 $font-primary, Arial, Helvetica, sans-serif;
+  color: $main-text-color;
+	// background-color: $main-color;
+  background: $highlite-color-1;
+
+  .page {
+    background-color: $main-color;
+  }
+}
+
+::-moz-selection { /* Code for Firefox */
+    color: #fff;
+    background: $highlite-color-3;
+}
+
+::selection {
+    color: #fff;
+    background: $highlite-color-3;
+}
+
+a, a:link, a:visited {
+  transition: all 0.3s;
+  // cursor: pointer;
+  // color: currentColor;
+  // text-decoration: none;
+  // display: inline-block;
+  // &:hover {
+  //   color: #000;
+  // }
+
+
+  .dark-bg & {
+      color: #fff;
+      text-decoration: none;
+      // &:hover:not(.btn) {
+      //     text-decoration: underline;
+      // }
+  }
+
+  &.download-link {
+    display: inline-block;
+    text-decoration: none;
+    color: $main-text-color;
+    background-image: url(../images/down-arrow.svg);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 17px;
+    padding-left: 29px;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $font-bold;
+    line-height: 1.3;
+    letter-spacing: 0;
+    font-weight: bold;
+    margin-bottom: 0.45em;
+}
+
+h1, .bulletin-main-title, .main-title {
+  @include main-title;
+}
+
+h2 {
+  // font-family: 'Miriam_Bold';
+  line-height: 1.1;
+  font-size: rem(30px);
+  // font-weight: normal;
+
+  &.block-title {
+    font-family: $font-bold;
+    font-size: $font-h3;
+    color: $highlite-color-3;
+    border-bottom: $main-border;
+    margin-bottom: 0.5em;
+    line-height: 1.8;
+    .no-border & {
+      border-bottom: none;
+    }
+  }
+
+  .large-block-title &.block-title {
+    font-size: rem(40px);
+    color: $highlite-color-1;
+    margin-bottom: 25px;
+    border: none;
+  }
+}
+
+h3 {
+  font-size: rem(22px);
+  font-family: $font-primary;
+}
+
+h4 {
+    font-size: rem(16px);
+}
+
+img:not(.admin-menu-icon) {
+  width: 100%;
+  height: auto;
+}
+
+button, select {
+  cursor: pointer;
+}
+
+button, .btn a {
+  background: transparent;
+  color: inherit;
+  font-size: inherit;
+  font-family: inherit;
+  border-radius: unset;
+  border: none;
+  text-shadow: none;
+}
+
+button:focus, button:active, input:focus, input:active, select:focus, select:active, textarea:focus, textarea:active {
+  box-shadow: $highlite-color-3;
+  z-index: 1;
+}
+
+button.clear-btn:focus, button.clear-btn:active {
+  box-shadow: none;
+}
+
+small {
+  font-size: $font-small;
+}
+
+// strong {
+//   font-weight: normal;
+//   font-family: $font-bold;
+// }
+
+ul,
+fieldset {
+  padding: 0;
+  margin: 0;
+}
+
+fieldset {
+  border: none;
+}
+
+abbr[title], acronym[title] {
+    text-decoration: none;
+}
+
+.time-default {
+  direction: ltr;
+}
+
+/*-----------Field Collections------------*/
+
+.field-collection-container {
+    border: none;
+    margin: 0;
+}
+
+.field-collection-view {
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+
+.field-collection-view .entity-field-collection-item {
+  margin-bottom: 15px;
+}

@@ -1,0 +1,13 @@
+/*------ Contact Zone -------*/
+
+.staff-container {
+    width: 720px;
+    .staff-item {
+        flex: 0 0 230px;
+        margin: 0 0 20px 10px;
+
+        img {
+            margin-bottom: 15px;
+        }
+    }
+}

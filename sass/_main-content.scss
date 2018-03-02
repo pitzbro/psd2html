@@ -1,13 +1,36 @@
 
 .main-wrapper {
+
     @include bordered-content;
+    
+    @include for-narrow-layout {
+        flex-direction: column;
+    }
     
     .first-panel {
         width: 300px;
         padding-right: 20px;
+
+        @include for-narrow-layout {
+            width: 100%;
+            column-count: 2;
+            column-gap: 20px;
+            padding-right: 0;
+            margin-bottom: 20px;
+        }
+        
+        @include for-portrait-layout {
+            column-count: 1;
+            column-gap: 0;
+        }
+
     }
     
     .second-panel {
         width:620px;
+        @include for-narrow-layout {
+            width: 100%;
+        }
     }
+
 }

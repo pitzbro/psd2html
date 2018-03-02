@@ -1,10 +1,17 @@
-$mobile-breakpoint: 740px;
+$portrait-breakpoint: 550px;
+$landscape-breakpoint: 740px;
 $narrow-breakpoint: 980px;
 
 /* Breakpoint mixins */
 
-@mixin for-mobile-layout {
-  @media (max-width: $mobile-breakpoint) {
+@mixin for-portrait-layout {
+  @media (max-width: $portrait-breakpoint) {
+    @content;
+  }
+}
+
+@mixin for-landscape-layout {
+  @media (max-width: $landscape-breakpoint) {
     @content;
   }
 }

@@ -7,8 +7,14 @@
 .container {
     max-width: $narrow-breakpoint;
     margin: 0 auto;
+    padding: 0 20px;
 
     @include for-narrow-layout {
-        max-width: $mobile-breakpoint;
+        max-width: $landscape-breakpoint;
     }
+    
+    @include for-landscape-layout {
+        max-width: 100%;
+    }
+
 }

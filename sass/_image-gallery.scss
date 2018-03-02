@@ -1,0 +1,42 @@
+
+.images-wrapper {
+    margin-bottom: rem(20px);
+    display: grid;
+    
+    grid-template-columns: repeat(8, 60px);
+    grid-auto-rows: 60px;
+    
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+
+    grid-auto-flow: dense;
+
+    .image-item {
+        background-color: $color-5;
+        background-size: cover;
+        background-position: center center;
+    }
+
+    .square-img {
+        grid-column: span 5;
+        grid-row: span 5;
+    }
+    .vertical-img {
+        grid-column: span 3;
+        grid-row: span 5;
+    }
+    .horizontal-img {
+        grid-column: span 8;
+        grid-row: span 4;
+    }
+}
+
+.image-001 {
+    background-image: url('../images/image-001.jpg')
+}
+.image-002 {
+    background-image: url('../images/image-002.jpg')
+}
+.image-003 {
+    background-image: url('../images/image-003.jpg')
+}

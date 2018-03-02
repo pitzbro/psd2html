@@ -12,9 +12,13 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 0 rem(20px);
   font-weight: normal;
   font-family: $font-bold;
-  letter-spacing: 2px;
 }
 
 h1 {
   font-size: rem(48px);
+  letter-spacing: 2px;
+}
+
+button {
+  cursor: pointer;
 }

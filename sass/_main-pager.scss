@@ -1,4 +1,21 @@
 .main-pager {
   @include bordered-content;
   border-top: $main-border;
+  color: $color-11;
+
+  button {
+    background: none;
+    border: none;
+    font-size: rem(18px);
+    font-family: $font-bold;
+    text-transform: uppercase;
+    color: inherit;
+  }
+
+  .prev::before {
+    content: "← "
+  }
+  .next::after {
+    content: " →"
+  }
 }

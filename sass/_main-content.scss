@@ -1,5 +1,13 @@
-main {
-    .main-wrapper {
-        @include bordered-content;
+
+.main-wrapper {
+    @include bordered-content;
+    
+    .first-panel {
+        width: 300px;
+        padding-right: 20px;
+    }
+    
+    .second-panel {
+        width:620px;
     }
 }

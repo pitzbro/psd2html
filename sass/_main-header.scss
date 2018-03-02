@@ -8,30 +8,105 @@ header {
         height: $header-height;
     }
 
-    .main-menu {
-        a {
-            color: #fff;
-            text-decoration: none;
-            display: block;
-            line-height: $header-height;
-            height: $header-height;
-            width: rem(135px);
-            text-align: center;
-            border-right: $dark-border;
-            
-            &:first-child {
-                border-left: $dark-border;
-            }
+    .logo {
+        padding: 0 20px;
+    }
+}
 
+.main-menu {
+    a {
+        color: #fff;
+        text-decoration: none;
+        display: block;
+        line-height: $header-height;
+        height: $header-height;
+        width: rem(135px);
+        text-align: center;
+        border-right: $dark-border;
+        
+        &:first-child {
+            border-left: $dark-border;
+        }
+
+        &.active {
+            border-bottom: $active-border;
+            color: $color-2;
+        }
+        
+        &:hover {
+            color: $color-2;
+        }
+    }
+    
+    @include for-landscape-layout {
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 300;
+        background: $color-4;
+        height: 100vh;
+
+        transition: transform 1s;
+
+        transform: translate(100%, 0);
+
+        .open & {
+            transform: translate(0, 0);
+        }
+        
+        a {
+            height: auto;
+            line-height: 1;
+            padding: 20px 0;
+            width: 60vw;
+            border: none;
+            border-bottom: $dark-border;
             &.active {
-                border-bottom: $active-border;
-                color: $color-2;
-            }
-            
-            &:hover {
-                color: $color-2;
+                border-width: 1px;
             }
         }
+    }
+}
+
+
+.toggle-menu-screen {
+
+    display: none;
+
+    @include for-landscape-layout {
+        display: block;
+    }
+
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    background: rgba(42, 42, 42, 0.6);
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    cursor: pointer;
+
+    transition: opacity .5s;
+
+    .open & {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+.toggle-menu-btn {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: rem(28px);
+    padding: 20px;
+    display: none;
+
+    @include for-landscape-layout {
+        display: block;
     }
 }
 

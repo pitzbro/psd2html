@@ -7,7 +7,6 @@
 .container {
     max-width: $narrow-breakpoint;
     margin: 0 auto;
-    padding: 0 20px;
 
     @include for-narrow-layout {
         max-width: $landscape-breakpoint;

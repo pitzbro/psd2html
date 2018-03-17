@@ -286,7 +286,7 @@ header {
       grid-auto-rows: 40px; } }
   @media (max-width: 740px) {
     .images-wrapper {
-      grid-template-columns: repeat(12, calc( (100vw - 280px) / 12));
+      grid-template-columns: repeat(12, calc( (100% - 220px) / 12));
       grid-auto-rows: calc( (100vw - 280px) / 12); } }
   .images-wrapper .image-item {
     background-color: #606060;
@@ -343,7 +343,8 @@ header {
     font-size: 1.125rem;
     font-family: latobold, sans-serif;
     text-transform: uppercase;
-    color: inherit; }
+    color: inherit;
+    padding: 0; }
     .main-pager button:hover {
       color: #516fad; }
   .main-pager .prev::before {
